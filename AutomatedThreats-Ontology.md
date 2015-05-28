@@ -1,4 +1,4 @@
-# Automated Threats to Web Applications - Ontology
+# Automated Threats to Web Applications - Handbook
 
 DRAFT, May 2015
 
@@ -6,13 +6,18 @@ DRAFT, May 2015
 
 ### Front
 
-A New Ontlogy of Automated Threats to Web Applications
+The Automated Threat Handbook
+
+(this is essentially the ontology with its background, but will grow to include other materials like the cheat sheet, mitigations, etc).
 
 ### Back
 
-The OWASP Automated Threats to Web Applications Project creates information and other resources for architects, developers, testers, and others to help web application owners defend against automated threats.
+This document is an output of the OWASP Automated Threats to Web Applications Project creates information and other resources for architects, developers, testers, and others to help defend against automated threats.
 
-https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications
+[https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+
+
+(ISBN Code)
 
 ## Preface
 
@@ -56,6 +61,16 @@ Frequently these have sector-specific names. Most of these problems seen regular
 
 Without sharing a common language between devops, architects, business owners, security engineers, purchasers and suppliers/vendors, everyone has to make extra effort to communicate clearly. Misunderstandings can be costly. The adverse impacts affect the privacy and security of individuals as well as the security of the applications and related system components.
 
+### Objectives
+
+The initial objectives were:
+
+* Provide definition of "automated threat" 
+* Create a common vocabulary, and relationships, of automated threats which maintains consistency with existing literature 
+
+MOVE Any inconsistencies with existing literature should be accompanied with rationale
+
+
 ### Scope
 
 The aim is to create a listing of vendor-neutral and technology agnostic terms that describe real-world automated threats to web applications, at a level of abstraction that application owners can relate to. These terms are threat events to web applications undertaken using automated actions.
@@ -65,6 +80,9 @@ The focus is on abuse of functionality - misuse of inherent functionality and re
 Threat events to web applications undertaken using automated actions.
 
 An attack that can be achieved without the web is out of scope.
+
+Focus for threat events are scenarios which are seen commonly by real operating web applications, and are multi-step and/or highly iterative and/or multiple weaknesses involved, and not primarily about events that relate to the tool-based exploitation of single-issue vulnerabilities of individual web applications.
+
 
 ### Use cases
 
@@ -110,7 +128,7 @@ The research and analysis and discussions with peers, completed over three month
 
 The names used, combibed with their definining characteristics, are taken from existing usage where possible. However, terminology is not used consistently within the literature sources reviewed, and also in some cases it bwas necessary to use a more generic term that caputures the wider idea instaed of an individual common name. Furthermore, the intended outcomes of the threat action are usually known at the time of the action taking place. For example, is the creation of a fake account intended for distributing malware in user-generated content, or to manipulate search engine scoring, or to influnce other users, or to explore the authenticated parts of the application.
 
-
+The ontology is a list of threat event scenarios (when a threat agent acts against an asset, partially ordered in time) by software, causing a divergence from accepted behavior producing one or more undesirable effects on a web application, and which excludes tool-based exploitation of single-issue vulnerabilities.
 
 ### The list
 
