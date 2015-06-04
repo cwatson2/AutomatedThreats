@@ -243,6 +243,85 @@ An application delivered over the web
 TODO (being drafted in different format)
 
 
+### OAT-001 CardingMultiple payment authorisation attempts used to verify the validity of bulk stolen payment card data.
+
+
+
+### OAT-002 Token Code CrackingMass enumeration of coupon numbers, voucher codes, discount tokens, etc.
+
+
+
+### OAT-003 Click and Impression FraudFalse clicks and fraudulent display of web-placed advertisements
+
+
+
+### OAT-004 FingerprintingElicit information about the supporting web, application and database servers, and framework types and versions.
+
+
+
+### OAT-005 ScalpingObtain limited-availability goods or services by unfair methods.
+
+
+
+### OAT-006 ExpeditingPerform actions to hasten progress of usually slow, tedious or time-consuming actions on behalf of a person.
+
+
+
+### OAT-007 Credential CrackingIdentify valid log in credentials by trying different values for usernames and/or passwords.
+
+
+
+### OAT-008 Credential StuffingMass log in attempts used to verify the validity of stolen username/password pairs.
+
+
+
+### OAT-009 CAPTCHA BypassSolve anti-automation tests.
+
+
+
+### OAT-010 Card CrackingIdentify missing expiry dates and security codes for stolen payment card data by trying different values.
+
+
+
+### OAT-011 ScrapingCollect application content and/or data for use or republication elsewhere.
+
+
+
+### OAT-012 Cashing OutBuy goods or obtain cash utilising validated stolen payment card data.
+
+
+
+### OAT-013 SnipingLast minute bid or offer, for goods or services.
+
+
+
+### OAT-014 Vulnerability ScanningCrawl and fuzz application to identify weaknesses and possible vulnerabilities.
+
+
+
+### OAT-015 Denial of ServiceTarget resources of the application and database servers, or individual user accounts, to achieve denial of service (DoS).
+
+
+
+### OAT-016 SkewingRepeated link clicks, page requests or form submissions intended to alter some metric.
+
+
+
+### OAT-017 SpammingMalicious and/or more benign information addition, that appears in public or private content, databases or user messages.
+
+
+
+### OAT-018 FootprintingProbe and explore application to identify its constituents and properties.
+
+
+
+### OAT-019 Account CreationCreate multiple accounts for subsequent misuse.
+
+
+
+
+
+
 ## Appendix B - Mappings
 
 TODO
