@@ -275,23 +275,22 @@ An application delivered over the web
 
 ### Key
 
-####Sectors Targeted####
-Sectors that are targted more commonly than others for the specific threat event, are highlighted in amber. This is currently just the author's opionion, but the project is seeking information to define this aspect more accurately.
-####Parties Affected####
-Whether individuals, groups of people, the application owner and other parties are most often affected adversely by the threat event. The threat event may affect other parties depending upon the application and its data. The parties affected, exclude subsequent further misuse.
-####Data Commonly Misused####
-The types of data are web application specific. However some threat events are more likely to occur for certain data types.
+Categorisations:
 
+* Sectors Targeted - Sectors that are targted more commonly than others for the specific threat event, are highlighted in amber. This is currently just the author's opionion, but the project is seeking information to define this aspect more accurately.
+* Parties Affected - Whether individuals, groups of people, the application owner and other parties are most often affected adversely by the threat event. The threat event may affect other parties depending upon the application and its data. The parties affected, exclude subsequent further misuse.
+* Data Commonly Misused - The types of data are web application specific. However some threat events are more likely to occur for certain data types.
 
-CAPEC
-Best full and/or partial match CAPEC category IDs and/or attack pattern IDs.
+Cross-references:
+
+* CAPEC - Best full and/or partial match CAPEC category IDs and/or attack pattern IDs.
 
 The best match is often the category CAPEC-210 Abuse of Functionality. Only Credential Cracking, Denial of Service and Scraping map to multiple more detailed CAPEC attack pattern IDs, and in these case the most general ones are listed only. The best example of good coverage by both this ontologfy and CAPEC is Credential Cracking, where the latter has three attack patterns defined that completely cover the automated threat event. Based on this comparison it was found that CAPEC categories are often too broad, or the attack patterns are missing or much more detailed than this ontology.
 
-WASC
+* WASC - 
 
 
-OWASP
+* OWASP - 
 
 
 
