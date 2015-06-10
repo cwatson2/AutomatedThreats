@@ -140,11 +140,24 @@ The ontology is a list of threat event scenarios (when a threat agent acts again
 
 Full details of each threat action are shown in Appendix A, with mappings to other dictionaries and lists in Appendix B.
 
+To enable internal cross-referencing and reference from elsewhere, each threat event has been given an idententivation (ID) value. This is a three digit number prefixed by a hyphen and an abbreviation for OWASP Automated Threat (OAT) e.g. OAT-015. The IDs were randomly assigned in an attempt to stop the ontoloy being seen as an ordered list, and also to ensure that neighbouring items are not necessarily related. Other cross-referencing is provided. Currently IDs 001 to 019 are used, and it is expected the total number should be <<50, unless in the future many sub-items are added. Three digits, rather than two, were alloted in case the first dogit is used for sometingbelse in future e.g. perhaps mobile application automated threat events could be 1xx, and 2xx for embedded software, etc. 
+
+(add some text from Appendix A Key to describe others parts of these pages)
 
 ### Notes on some names
 
 Some ontology names are much more specific than others, where the threat is cross-sector and it is reported to occur frequently. Others are larger buckets which cannot be broken down easily without sharding the threat actions into a multitude of sector-specific and function-specific examples.
 
+### Mappings
+
+tables in appendix???
+
+
+### The perpetrators
+
+During the early stateges of the ontology's creation, it was believed it would be possible to suggest which threat actors might be most likely to initiate the threat event. These threat agents might be groups like competitors, journalists, petty criminals, organised crime, nation states, etc and of course users such as citizens, clients, customers and employees. However, on further inspection the threat agents appear to be more closely related to the type of data, and thus sector, rather than the particular threat event. Consequently, it is believes threat agent should be re-considered in future sector-specific views of the ontology.
+
+Furthermore, some threat events may be undertaken by, or with the knowledge or implicit support of, by application opwners. For example, search engine indexing is generally encouraged due to the benefit of increased user traffic, or automated monitoring of web applications may be commissioned, or excessive account creation might contribute to enhanced market reputation when promoting the size of its customer base, or the application owner with hosted advertisements could receive additional income for advert fraud.
 
 
 
@@ -209,10 +222,22 @@ The purpose is understand the inner workings, and may be used to detemine busine
 
 
 
+
+
+
 ## Forward plan
 
+Sector-specific guides:
 
+* Highest risk threat events
+* 
 
+Pages 2s:
+
+* Mitigations
+* Symptoms
+* For builders
+* For defenders
 
 
 ## Glossary
@@ -247,6 +272,28 @@ An application delivered over the web
 
 
 ## Appendix A - Ontology
+
+### Key
+
+####Sectors Targeted####
+Sectors that are targted more commonly than others for the specific threat event, are highlighted in amber. This is currently just the author's opionion, but the project is seeking information to define this aspect more accurately.
+####Parties Affected####
+Whether individuals, groups of people, the application owner and other parties are most often affected adversely by the threat event. The threat event may affect other parties depending upon the application and its data. The parties affected, exclude subsequent further misuse.
+####Data Commonly Misused####
+The types of data are web application specific. However some threat events are more likely to occur for certain data types.
+
+
+CAPEC
+Best full and/or partial match CAPEC category IDs and/or attack pattern IDs.
+
+The best match is often the category CAPEC-210 Abuse of Functionality. Only Credential Cracking, Denial of Service and Scraping map to multiple more detailed CAPEC attack pattern IDs, and in these case the most general ones are listed only. The best example of good coverage by both this ontologfy and CAPEC is Credential Cracking, where the latter has three attack patterns defined that completely cover the automated threat event. Based on this comparison it was found that CAPEC categories are often too broad, or the attack patterns are missing or much more detailed than this ontology.
+
+WASC
+
+
+OWASP
+
+
 
 ### OAT-001 CardingMultiple payment authorisation attempts used to verify the validity of bulk stolen payment card data.
 
@@ -284,7 +331,7 @@ Coupon guessing; Voucher, gift card and discount enumeration
 * OAT-011 Scraping
 * OAT-012 Cashing Out
 
-### OAT-003 *Advert Fraud*False clicks and fraudulent display of web-placed advertisements
+### OAT-003 *Advert Fraud*False clicks and fraudulent display of web-placed advertisements.
 
 #### Description
 
@@ -305,7 +352,7 @@ Ad fraud; Adware traffic; Click bot; Click fraud; Hit fraud; Impression fraud; P
 
 #### Description
 
-Specific requests are sent to the application eliciting information in order to profile the application. This probing typically examinse HTTP header names and values, session identifier names and formats, contents of error page messages, URL path case sensitivity, URL path patterns, file extensions, and whether software-specific files and directories exist. Fingerprinting is often reliant on information leakage and this profiling may also reveal some network architecture/topology.
+Specific requests are sent to the application eliciting information in order to profile the application. This probing typically examine HTTP header names and values, session identifier names and formats, contents of error page messages, URL path case sensitivity, URL path patterns, file extensions, and whether software-specific files and directories exist. Fingerprinting is often reliant on information leakage and this profiling may also reveal some network architecture/topology. The fingerprinting may be undertaken without any direct usage of the application e.g. by quering a store of exposed application properties such as held in a search engine's index.
 
 Fingerprinting seeks to identity application components, whereas Footprinting is a more detailed analysis of how the application works.
 
@@ -321,7 +368,7 @@ Google dorking; Google hacking; Shodaning; Target acquisition; Target scanning; 
 * OAT-018 Footprinting
 
 
-### OAT-005 ScalpingObtain limited-availability and/or preferred goods or services by unfair methods.
+### OAT-005 ScalpingObtain limited-availability and/or preferred goods/services by unfair methods.
 
 #### Description
 
@@ -350,7 +397,7 @@ In contrast to Skewing which affects metrics, Expediting is purely related to fa
 
 #### Other Names and Examples
 
-Algorithmic trading; Automated stock trading; Betting automation; Game playing automation; Gaming bot; Gold farming; High frequency trading; Purchasing automation; Travel ticketing automation; Trading automation; Virtual wealth generation bot
+Algorithmic trading; Automated stock trading; Betting automation; Game playing automation; Gaming bot; Gold farming; *Financial instrument dealing;* High frequency trading; Purchasing automation; Travel ticketing automation; Trading automation; Virtual wealth generation bot
 
 #### See Also
 
@@ -433,7 +480,7 @@ Brute forcing credit card information; Card brute forcing; Credit card cracking
 * OAT-012 Cashing Out
 
 
-### OAT-011 ScrapingCollect application content and/or data for use and/or republication elsewhere.
+### OAT-011 ScrapingCollect application content and/or other data for use elsewhere.
 
 #### Description
 
@@ -480,7 +527,7 @@ The defining characteristic of Sniping is an action undertaken at the latest opp
 
 #### Other Names and Examples
 
-Auction sniping; Bid sniper; Financial instrument dealing; Last minute bet; Timing attack
+Auction sniping; Bid sniper; *Front-running; Last look;* Last minute bet; Timing attack
 
 #### See Also
 
@@ -610,27 +657,58 @@ TODO
 
 ### Defining application security requirements
 
+#### Intent
+
+
+#### In practice
+
+The specification for the outsourced development of a new ecommerce website requires that the website must not include any vulnerabilities identified in PCI DSS v3.1 Requirements 6.5. In addition the merchants now adds that the website's payment functions must not be susceptiple to OWASP Automated Threats OAT-001 (Carding), OAT-010 (Card Cracking), or OAT-012 (Cashing Out).
+
 ### Sharing intelligence within a sector
 
+#### Intent
+
 Unlimited Innovations Inc provides ecommerce solutions to a range of international retailers and participates in the Retail Cyber Intelligence Sharing Center (R-CISC). Unlimited already builds into its software continuous monitoring capabilities and decides to provide an optional enhancement so that participating retailers could choose to share their misuse event data between each other, to benefit from the combined threat intelligence. Rather than sharing large quantities of  low-level data, Unlimited aggregate information and broadcast validated and categorised threat data amongst the participating companies. Automation attacks are classified according to the [ONTOLOGY] so that each receiving party understands the nature of the threat. Even for retailers that do not want to take part of this information sharing can benefit, since the classified information is made available to internal business management in the form of an easy-to-comprehend monitoring dashboard. The information gathered is also used by the retailers to feed into their business information management systems.
+
+#### In practice
+
 ### Exchanging threat data between CERTs
 
 TODO
+
+#### Intent
+
+#### In practice
+
 ### Labelling penetration test findings
 
+#### Intent
+
 Specialist application security penetration testing firm Cherak Industries Pte Ltd works primarily for financial services companies in the banking and insurance sector and is looking to expand its business throughout Asia. Cherak has some innovative pen test result reporting systems which integrate with client software fault and vulnerability tracking systems, and it is always on the look out for methods to provide additional value to its clients. Cherak has identified that pen test clients would benefit from help with understanding the effects of combinations of vulnerabilities and has decided to utilise the [ONTOLOGY] to define and explain the automation-related threats. The individual vulnerabilities were scored as normal using CVSSv2 and v3, the matching CWEs identified, and mitigations in place documented. In addition Cherak used the [ONTOLOGY] to help create a new section in the executive summary to explain how combinations of the issues found could lead to automation threats and the possible technical and business impacts. For example, an assessment for one client had identified weaknesses in authentication so that [CREDENTIAL STUFFING] is an automation threat. The defined [ONTOLOGY] entry name and ID were provided so that the client's technical staff could refer to additional information on the OWASP website.
+
+#### In practice
+
+
 ### Documenting service acquisition needs
 
+#### Intent
+
 Falstone Paradise Inc is concerned about malicious use of their portfolio of hotel and resort websites. The majority of the websites use a shared application platform, but there are some unique applications and a large number of other micro-sites, some of which use generic content management systems such as Wordpress and Drupal. Falstone Paradise has identified that its IT operations team are spending too much time dealing with the effects of automated misuse, such as cleaning up data, resetting customer accounts and providing extra capacity during attacks. Furthermore, the unwanted automation is also causing some instabilities leading to negative feedback from customers. Therefore Falstone Paradise has decided to go out to the security marketplace to identify, assesses and select products or services that might help address these automation issues for all its websites. Its buying team worked with their colleagues in information technology to write the detailed requirements in an Invitation to Tender (ITT) document. This described the types of attacks its web applications are receiving, the frequency of occurrence and magnitudes. These are defined according to the [ONTOLOGY] so that vendors do not misunderstand the requirements, and so that each vendor's offering could be assessed against each individual type of automation threat. 
+
+#### In practice
+
+
 ### Characterising vendor services
 
 TODO
 
-## Appendix D - Attack Descriptions and Test Cases
+#### Intent
 
-TODO
+#### In practice
 
-## Appendix E - Automated Attack Defense Cheat Sheet
+
+
+## Appendix D - Automated Attack Defense Cheat Sheet
 
 TODO: (being drafted as separate document)
 
