@@ -49,6 +49,7 @@ The OWASP Automated Threats to Web Applications Project has completed a review o
 The project also intends to identify symptoms, mitigations and controls in this problem area. Like all OWASP outputs, everything is free and published using an open source license. 
 
 ### Requirement
+
 Web applications are subjected to unwanted automated usage – day in, day out. Often these events relate to misuse of inherent valid functionality, rather than the attempted exploitation of unmitigated vulnerabilities. Also, excessive misuse is commonly mistakenly reported as application denial-of-service (DoS) like HTTP-flooding, when in fact the DoS is a side-effect instead of the primary intent. Some examples commonly referred to are:
 
 * Account enumeration
@@ -90,14 +91,18 @@ The ontology and supporting materials are expected to be useful for:
 
 * Defining application security requirements* Sharing intelligence within a sector* Exchanging threat data between CERTs* Labelling penetration test findings* Documenting service acquisition needs* Characterising vendor services.
 
-These are expanded upon in Appendix C.
+These are expanded upon in Appendix A.
 
 ## Research
 
-
 ### Literature review
 
+
+
+
 ### Analysis
+
+
 
 ### Comparison with other dictionaries, taxonomies and lists
 
@@ -144,20 +149,36 @@ To enable internal cross-referencing and reference from elsewhere, each threat e
 
 (add some text from Appendix A Key to describe others parts of these pages)
 
-### Notes on some names
+### Notes on the names
 
-Some ontology names are much more specific than others, where the threat is cross-sector and it is reported to occur frequently. Others are larger buckets which cannot be broken down easily without sharding the threat actions into a multitude of sector-specific and function-specific examples.
+In all cases, "automated web application" could be used as a prefix to each name. Thus ,for example, **OAT-012 Cashing Out** is concerned only with using web applications to obtain cash or goods. The ontology's scope excludes cashing out using ATMs for example. When referencing the terms in other contexts it may be useful to ensure this scope is identified.
+
+Whenever possible an existing term already used in literature or industry usage was preferred. But in many cases it was difficult to identify this, and in some cases a more generic version had to be used. Some ontology names are much more specific than others, where the threat is cross-sector and it is reported to occur frequently. Others are larger buckets which cannot be broken down easily without sharding the threat actions into a multitude of sector-specific and function-specific examples.
 
 ### Mappings
 
 tables in appendix???
 
+### Timing, duration and frequency
+
+
+
+### Magnitude of impact
+
+Events related to automated threats can have impacts on more than just the application owner. Individuals, third parties and even society can be adversely affected. This ontology does not attempt to rank the threat events in terms of impact since it will be organisation, data, threat actor and victim-perspective specific.
 
 ### The perpetrators
 
 During the early stateges of the ontology's creation, it was believed it would be possible to suggest which threat actors might be most likely to initiate the threat event. These threat agents might be groups like competitors, journalists, petty criminals, organised crime, nation states, etc and of course users such as citizens, clients, customers and employees. However, on further inspection the threat agents appear to be more closely related to the type of data, and thus sector, rather than the particular threat event. Consequently, it is believes threat agent should be re-considered in future sector-specific views of the ontology.
 
-Furthermore, some threat events may be undertaken by, or with the knowledge or implicit support of, by application opwners. For example, search engine indexing is generally encouraged due to the benefit of increased user traffic, or automated monitoring of web applications may be commissioned, or excessive account creation might contribute to enhanced market reputation when promoting the size of its customer base, or the application owner with hosted advertisements could receive additional income for advert fraud.
+Furthermore, some threat events may be undertaken by, or with the knowledge or implicit support of, by application opwners. For example, search engine indexing is generally encouraged due to the benefit of increased user traffic, or automated monitoring of web applications may be commissioned, or excessive account creation might contribute to enhanced market reputation when promoting the size of its customer base, or the application owner with hosted advertisements could receive additional income for Ad Fraud.
+
+### Fraud and legality 
+
+In general the ontology tries to avoid the use of judgmental words like fraud. But in one case, the industry accepted term for the three event includes this word. 
+
+In legal terms, whether an action is fraudulent depends on legislation and this jurisdiction. Some of the events in this ontology may be illegal actions in some jurisdictions. This will also depend upon the types of data handled, regulation of the application and its owner and application specific mandates like terms of use.
+
 
 
 
@@ -172,7 +193,7 @@ A small number of threat actions were removed from the final ontology during rev
 
 "Account Aggregation" was initially defined as user account aggregation where credentials from multiple individual user accounts are centralised into another application, with each user's permission. The aggregating application may be used by one user to merge information from multiple applications, or alternatively merge information of many users of a single application. This is commonly used for aggregating social media accounts, email accounts and financial accounts in order to obtain a consolidated overview, provide integrated reporting/analysis, and simplify usage and consumption by the user and/or their professional advisors. The aggreagting application may include making changes to account properties and interacting with the aggregated application's functionality. Some terms used elsewhere include password manager, financial account aggregator, client aggregator, or simply data aggregator.
 
-On consideration, it was felt that the provision of user credentials to the aggregator was not in itself an automated threat, and the resultant effects were indistinguishable from other information aggregation. The effects on the ability for the web application owner to interact with the end user may be enhanced or reduced depending upon the circumstances, and thius may or may not be desirable. Therefore, it was decided to incorporate "Account Aggregation" together with other types of data collection, along with data aggregation where information is republished on the web elsewhere, in a single threat action "Scraping", as the.
+On consideration, it was felt that the provision of user credentials to the aggregator was not in itself an automated threat, and the resultant effects were indistinguishable from other information harvesting. The effects on the ability for the web application owner to interact with the end user may be enhanced or reduced depending upon the circumstances, and thius may or may not be desirable. Therefore, it was decided to incorporate "Account Aggregation" together with other types of data collection, along with data aggregation where information is republished on the web elsewhere, in a single threat action "Scraping".
 
 #### Application consumption
 
@@ -188,7 +209,7 @@ In all of these, there seemed to be a close similarlity with "Account Aggregatio
 
 "Asset Stripping" was thought of as the removal of application stored non-data assets using compromised accounts and sessions, including data theft, collecting micro deposits, and collecting refunds. However this asset removal, extraction or copying from applications used as repositories is no different from other data harvesting at the time of extraction. The only difference is the assets have value in other non-application contexts and may include fiat money, credit, refunds, financial instruments, reputation, virtual assets (e.g. status, score, virtual currency, identity), awards and points, and possible physical assets the application provides contol over. But this value is often very subjective.
 
-Since these are data, it was considered this threeat action was actually part of scraping. The objectives of the attacker and consequences are data and application specific. It was therefore not included as a separate term.
+Since these are data, it was considered this threeat action was actually part of Scraping. The objectives of the attacker and consequences are data and application specific. It was therefore not included as a separate term.
 
 #### Code modification
 
@@ -221,7 +242,7 @@ The purpose is understand the inner workings, and may be used to detemine busine
 ## Usage of the ontology
 
 
-
+The author hopes this ontology with its industry cross-referencing may be of help in contributing to Mitre's Common Weakness Risk Analysis Framework (CWRAF) and Common Attack Pattern Enumeration and Classification (CAPEC).
 
 
 
@@ -271,388 +292,8 @@ The first three specifications for Web technologies defined URLs, HTTP, and HTML
 An application delivered over the web
 
 
-## Appendix A - Ontology
 
-### Key
-
-Categorisations:
-
-* Sectors Targeted - Sectors that are targted more commonly than others for the specific threat event, are highlighted in amber. This is currently just the author's opionion, but the project is seeking information to define this aspect more accurately.
-* Parties Affected - Whether individuals, groups of people, the application owner and other parties are most often affected adversely by the threat event. The threat event may affect other parties depending upon the application and its data. The parties affected, exclude subsequent further misuse.
-* Data Commonly Misused - The types of data are web application specific. However some threat events are more likely to occur for certain data types.
-
-Cross-references:
-
-* CAPEC - Best full and/or partial match CAPEC category IDs and/or attack pattern IDs.
-
-The best match is often the category CAPEC-210 Abuse of Functionality. Only Credential Cracking, Denial of Service and Scraping map to multiple more detailed CAPEC attack pattern IDs, and in these case the most general ones are listed only. The best example of good coverage by both this ontologfy and CAPEC is Credential Cracking, where the latter has three attack patterns defined that completely cover the automated threat event. Based on this comparison it was found that CAPEC categories are often too broad, or the attack patterns are missing or much more detailed than this ontology.
-
-* WASC - 
-
-
-* OWASP - 
-
-
-
-### OAT-001 CardingMultiple payment authorisation attempts used to verify the validity of bulk stolen payment card data.
-
-#### Description
-
-Lists of full credit and/or debit card data are tested against a merchant's payment processes to identify valid card details. The quality of stolen data is often unknown, and Carding is used to identify good data of higher value. Payment cardholder data may have been stolen from another application, stolen from a different payment channel, or acquired from a criminal marketplace.
-
-When partial cardholder data is available, and the expiry date and/or security code are not known, the process is Card Cracking instead. The use of stolen cards to obtain cash or goods is Cashing Out.
-
-#### Other Names and Examples
-
-Card stuffing; Credit card stuffing; Card verification
-
-#### See Also
-
-* OAT-010 Card Cracking
-* OAT-012 Cashing Out
-
-
-### OAT-002 Token Code CrackingMass enumeration of coupon numbers, voucher codes, discount tokens, etc.
-
-#### Description
-
-Identification of valid token codes providing some form of user benefit within the application. The benefit may be a cash alternative, a non-cash credit, a discount, or an opportunity such as access to a limited offer.
-
-The cracking of usernames is included in Credential Cracking instead.
-
-#### Other Names and Examples
-
-Coupon guessing; Voucher, gift card and discount enumeration
-
-#### See Also
-
-* OAT-007 Credential Cracking
-* OAT-011 Scraping
-* OAT-012 Cashing Out
-
-### OAT-003 *Advert Fraud*False clicks and fraudulent display of web-placed advertisements.
-
-#### Description
-
-Falsification of the number of times an item such as an advert is clicked on, or the number of times an advertisement is displayed. Performed by owners of web sites displaying ads, competitors and vandals.
-
-See Skewing instead for similar activity that does not involve web-placed advertisements.
-
-#### Other Names and Examples
-
-Ad fraud; Adware traffic; Click bot; Click fraud; Hit fraud; Impression fraud; Pay per click advertising abuse; Phoney ad traffic
-
-#### See Also
-
-* OAT-016 Skewing
-
-
-### OAT-004 FingerprintingElicit information from the web, application and database servers about the supporting software and framework types and versions.
-
-#### Description
-
-Specific requests are sent to the application eliciting information in order to profile the application. This probing typically examine HTTP header names and values, session identifier names and formats, contents of error page messages, URL path case sensitivity, URL path patterns, file extensions, and whether software-specific files and directories exist. Fingerprinting is often reliant on information leakage and this profiling may also reveal some network architecture/topology. The fingerprinting may be undertaken without any direct usage of the application e.g. by quering a store of exposed application properties such as held in a search engine's index.
-
-Fingerprinting seeks to identity application components, whereas Footprinting is a more detailed analysis of how the application works.
-
-For data extraction, see Scraping instead.
-
-#### Other Names and Examples
-
-Google dorking; Google hacking; Shodaning; Target acquisition; Target scanning; Finding potentially vulnerable applications; Reconnaissance; URL harvesting; Web application fingerprinting
-
-#### See Also
-
-* OAT-011 Scraping
-* OAT-018 Footprinting
-
-
-### OAT-005 ScalpingObtain limited-availability and/or preferred goods/services by unfair methods.
-
-#### Description
-
-Mass acquisition of goods or services using the application in a manner that a normal user would be unable to undertake manually.
-
-Although Scalping may include monitoring awaiting availability of the goods or services, and then rapid action to beat normal users to obtain the goods and services, Scalping is not a "last minute" action like Sniping, nor just related to automation on behalf of the user such as in Expediting. Scalping includes the additional concept of limited availability of sought-after goods or services, and is most well known in the ticketing business where the tickets acquired are then resold later at a profit by the scalpers/touts. This can also lead to a type of denial of service since the goods or services become unavailable rapidly.
-
-#### Other Names and Examples
-
-Bulk purchase; Purchase automaton; Purchase bot; Restaurant table/hotel room reservation speed-booking; Queue jumping; Sale stampede; Ticket resale; Ticket scalping; Ticket touting
-
-#### See Also
-
-* OAT-006 Expediting
-* OAT-013 Sniping
-* OAT-015 Denial of Service
-
-
-### OAT-006 ExpeditingPerform actions to hasten progress of usually slow, tedious or time-consuming actions on behalf of a person.
-
-#### Description
-
-Using speed to violate explicit or implicit assumptions about the application's normal use to achieve unfair individual gain, often associated with deceit and loss to some other party.
-
-In contrast to Skewing which affects metrics, Expediting is purely related to faster progression through an application's processes.
-
-#### Other Names and Examples
-
-Algorithmic trading; Automated stock trading; Betting automation; Game playing automation; Gaming bot; Gold farming; *Financial instrument dealing;* High frequency trading; Purchasing automation; Travel ticketing automation; Trading automation; Virtual wealth generation bot
-
-#### See Also
-
-* OAT-005 Scalping
-* OAT-013 Sniping
-* OAT-016 Skewing
-* OAT-017 Spamming
-
-
-### OAT-007 Credential CrackingIdentify valid log in credentials by trying different values for usernames and/or passwords.
-
-#### Description
-
-Brute force, dictionary (word list) and guessing attacks used against authentication processes of the application to identify valid account credentials. This may utilise common usernames or passwords, or involve initial username evaluation. 
-
-The use of stolen credential sets (paired username and passwords) is Credential Stuffing.
-
-#### Other Names and Examples
-
-Brute force, dictionary and guessing attacks; Brute-force attacks against sign-in; Brute forcing log-in credentials; Brute-force password cracking; Cracking login credentials; Password brute-forcing; Password cracking; Reverse brute force attack; Username cracking; Username enumeration
-
-#### See Also
-
-* OAT-002 Token Code Cracking
-* OAT-008 Credential Stuffing
-* OAT-019 Account Creation
-
-
-### OAT-008 Credential StuffingMass log in attempts used to verify the validity of stolen username/password pairs.
-
-#### Description
-
-Lists of authentication credentials stolen from elsewhere are tested against the application's authentication mechanisms to identify whether users have re-used the same log in credentials. The stolen usernames (often email addresses) and password pairs could have been sourced directly from another application by the attacker, purchased in a criminal marketplace, or obtained from publicly available breach data dumps.
-
-Unlike Credential Cracking, Credential Stuffing does not involve any brute-forcing or guessing of values; instead credentials sets used in other applications are being tested for validity.
-
-#### Other Names and Examples
-
-Account checker attack; Account checking; Account takeover; Account takeover attack; Login Stuffing; Password list attack; Password re-use; Stolen credentials; Use of stolen credentials
-
-#### See Also
-
-* OAT-007 Credential Cracking
-* OAT-019 Account Creation
-
-
-### OAT-009 CAPTCHA BypassSolve anti-automation tests.
-
-#### Description
-
-Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) challenges are used to distinguish normal users from bots. Automation is used in an attempt to analysis and determination the answer to visual and/or aural CAPTCHA tests and related puzzles. Apart from conventional visual and aural CAPTCHA, puzzle solving mini games or arithmetical exercises are sometimes used. Some of these may include context-specific challenges.
-
-The process that determines the answer may utilise tools to perform optical character recognition, or matching against a prepared database of pre-generated images, or using other machine reading, or human farms.
-
-#### Other Names and Examples
-
-Breaking CAPTCHA; CAPTCHA breaker; CAPTCHA breaking; CAPTCHA decoding; CAPTCHA solver; CAPTCHA solving; Puzzle solving
-
-#### See Also
-
-* OAT-006 Expediting
-* OAT-011 Scraping
-
-
-### OAT-010 Card CrackingIdentify missing expiry dates and security codes for stolen payment card data by trying different values.
-
-#### Description
-
-Brute force attack agsinst application payment card process to identify the missing values for start date, expiry date and card security code (CSC), referred to in many ways including card validation number 2 (CVN2), card validation code (CVC), card verification value (CV2) card identification number (CID).
-
-When these values are known as well as the Primary Account Number (PAN), Carding is used to validate the details, and Cashing Out to obtain goods or cash.
-
-#### Other Names and Examples
-
-Brute forcing credit card information; Card brute forcing; Credit card cracking
-
-#### See Also
-
-* OAT-001 Carding
-* OAT-012 Cashing Out
-
-
-### OAT-011 ScrapingCollect application content and/or other data for use elsewhere.
-
-#### Description
-
-Collecting accessible data and/or processed output from the application. Some scraping may use fake or compromised accounts, or the information may be accessible without authentication. The scraper may attempt to read all accessible paths and parameter values for web site pages and web APIs, collecting the responses and extracting data from them.
-
-Commonly collected data is page content and data such as account credentials, biometric data, business information, copies of physical documents, email addresses, facial photographs, identities, intellectual property, payment cardholder data, security secrets, trade secrets, usernames, and other personal data. Some of these may be considered of standalone value such as reputation, virtual assets (e.g. status, score, virtual currency, identity), awards and points.
-
-Some scraping may be to exercise an application, or part of an application, with the intent to gain insight how it is constructed and operates - perhaps for cryptanalysis, reverse engineering, or session analysis. 
-
-#### Other Names and Examples
-
-API provisioning; Asset stripping; Bargain hunting; Change monitoring; Comparative shopping; Data aggregation;  Data mining; Database scaping; Duplicate site; Extraction; Harvesting; Indexing; Media scraping; Memory scraping; Meta search scraper; Mirroring; Pagejacking; Price harvesting; Powering APIs; Product page scraper; Report mining; Ripping; Sanctioned scraping; Scraper bot; Screen scraping; Search engine bot; Social media bot
-
-#### See Also
-
-* OAT-012 Cashing Out
-* OAT-018 Footprinting
-
-
-### OAT-012 Cashing OutBuy goods or obtain cash utilising validated stolen payment card *or other user account* data.
-
-#### Description
-
-Obtaining currency or merchandise via the application using stolen previously validated payment cards or *financial account log in credentials*. Sometimes may be undertaken in conjunction with product return fraud. *The financial transaction is usually a transfer of funds to a mule's account.* For payment cards, this activity may occur following Carding of bulk stolen data, or Card Cracking, and the goods are dropped at a reshipper's address. *The refunding of payments via non-financial applications is also included in Cashing Out.* 
-
-Obtaining other assets of value from the application, without the use of payment cards *or other financial account details*, is Scraping instead.
-
-#### Other Names and Examples
-
-Cashing out; *Man-in-the-Browser (MitB);???* Money laundering; Online credit card fraud; Online payment card fraud; *Refund fraud; Stolen identity refund fraud (SIRF)*
-
-#### See Also
-
-* OAT-001 Carding
-* OAT-011 Scraping
-* OAT-010 Card Cracking
-
-
-### OAT-013 SnipingLast minute bid or offer, for goods or services.
-
-#### Description
-
-The defining characteristic of Sniping is an action undertaken at the latest opportunity to achieve a particular objective, leaving insufficient time for another user to bid/offer. Sniping can also be the automated exploitation of system latencies in the form of timing attacks. Careful timing and prompt action are necessary parts. It is most well known as auction sniping, but the same threat event can be used in other types of application.
-
-#### Other Names and Examples
-
-Auction sniping; Bid sniper; *Front-running; Last look;* Last minute bet; Timing attack
-
-#### See Also
-
-* OAT-005 Scalping
-* OAT-006 Expediting
-* OAT-015 Denial of Service
-
-
-### OAT-014 Vulnerability ScanningCrawl and fuzz application to identify weaknesses and possible vulnerabilities.
-
-#### Description
-
-Systematic enumeration and examination of identifiable, guessable and unknown content locations, paths, file names, parameters, in order to find weaknesses and points where a security vulnerability might exist. Vulnerability Scanning includes both malicious scanning and friendly scanning by an authorised vulnerability scanning engine. It differs from Scraping in that its aim is to identify potential vulnerabilities.
-
-The exploitation of individual vulnerabilities is not included in the scope of this ontology, but this process of scanning. Vulnerability Scanning, along with Footprinting, Fingerprinting and Scraping often form part of application penetration testing.
-
-Vulnerability Scanning has sometimes been mistakenly called penetration testing, or application security assessment, or vulnerability exploitation.
-
-#### Other Names and Examples
-
-Active/Passive vulnerability scanning; Application-specific vulnerability discovery by site-crawling botnet; Automated vulnerability scanning; Identifying vulnerable content management systems (CMS) and CMS components; Known vulnerability scanning; Malicious crawling; Scanning; Vulnerability reconnaissance, Vulnerability scanner; Vulnerability scanning
-
-#### See Also
-
-* OAT-004 Fingerprinting
-* OAT-011 Scraping
-* OAT-018 Footprinting
-
-
-### OAT-015 Denial of ServiceTarget resources of the application and database servers, or individual user accounts, to achieve denial of service (DoS).
-
-#### Description
-
-These attacks often resemble legitimate application usage, but lead to exhaustion of resources such as file system, memory, processes, threads, CPU, human or financial resources. The resources might be related to web, application or databases servers or other services supporting the application such as third party APIs, included third-party hosted content, or content delivery networks (CDNs).
-
-The application may be affected as a whole, or the attack may be against individual users such as account lockout. This user-specific application DoS may also be the result of application message, email or SMS spam floods.
-
-This ontology's scope excludes other forms of denial of service that affect web applications, namely HTTP Flood DoS (GET, POST, Header with/without TLS), HTTP Slow DoS, IP layer 3 DoS, and TCP layer 4 DoS. Those protocol and lower layer aspects are covered adequately elsewhere.
-
-#### Other Names and Examples
-
-Abuse of shopping carts; Account lockout; App layer DDoS; Asymmetric application-level DoS attacks; Asymmetric resource consumption (amplification); Bad configuration DoS; Business logic DDoS; Cash overflow; Cloud service provider credit DoS; Cost escalation; Disable/delete user accounts; Excessive allocation; Excessive anti-fraud measures; Forced deadlock; Hash DoS; Inefficient code; Indexer DoS; Large files DoS; Poorly designed web application DoS; Resource depletion; Resource locking; Regular expression exponential blowup; Resource exhaustion; Resource leak exposure; Self-inflicted DoS; SOAP array blowup; Spam receipt DoS; Sustained client engagement; The Great Firewall of China DoS; User DoS; XML attribute blowup; XML DoS; XML entity blowup; XML entity expansion; XML quadratic expansion
-
-#### See Also
-
-* OAT-005 Scalping
-* OAT-013 Sniping
-* OAT-019 Account Creation
-
-
-### OAT-016 SkewingRepeated link clicks, page requests or form submissions intended to alter some metric.
-
-#### Description
-Automated repeated clicking or requesting or submitting content, affecting application-based metrics such as counts, and measures of frequency and/or rate. The metric may be visible to users (e.g. betting odds, likes, market pricing, visitor count, poll results, reviews) or hidden (e.g. application usage statistics, business performance indicators). Metrics may affect individuals as well as application-owner e.g. user reputation, influence others, gain fame, or undermine someone else’s reputation.
-For skewing of digital advertisement metrics, see *Advert Fraud* instead
-
-#### Other Names and Examples
-Biasing KPIs; Boosting friends, visitors, and likes; Click fraud; Complaint boosting; Election fraud; Hit count fraud; Market distortion; Metric and statistic skewing; Page impression fraud; Poll fraud; Poll skewing; Poll/voting subversion; Rating/review skewing; Search engine ranking skewing; Skewing consultations, elections, polls, rankings and votes; Stock manipulation; Survey skewing
-
-#### See Also
-* OAT-003 *Advert Fraud** OAT-017 Spamming* OAT-019 Account Creation
-
-
-### OAT-017 SpammingMalicious and/or more benign information addition, that appears in public or private content, databases or user messages.
-
-#### Description
-
-Malicious content can include malware, Iframe distribution, photographs & videos, advertisements, referrer spam and tracking/surveillance code. The content might be less overtly malicious but be an attempt to cause mischief, undertake search engine optimisation (SEO) or to dilute/hide other posts.
-The mass abuse of broken form-to-email and form-to-SMS functions to send messages to unintended recipients is not included in this threat event, or any other in this ontology, since those are considered to be the exploitation of implementation flaws alone.
-For multiple use that distorts metrics, see Skewing instead.
-
-#### Other Names and Examples
-
-Blog spam; Bulletin board spam; Comment spam; Complaint spam; Content spam; Content spoofing; Email field spam; Enquiry spam; Form spam; Forum spam; Guest book spam; Profile spam; Referrer spam; Response form spam; Review spam; SEO referral spam; Spam crawlers; Spammer bot; Spam 2.0; Web spambot; Wiki spam; Third-party component compromise; Twitter spam
-
-#### See Also
-
-* OAT-015 Denial of Service* OAT-016 Skewing* OAT-019 Account Creation
-
-
-### OAT-018 FootprintingProbe and explore application to identify its constituents and properties.
-
-#### Description
-
-Information gathering with the objective of learning as much as possible about the composition, configuration and security mechanisms of the application. Unlike Scraping, Footprinting is an enumeration of the application itself, rather than the data. It is used to identify all the URL paths, parameters and values and process sequences (i.e. to determine entry points, also called the attack surface). As the application is explored, additional paths will be identified which in turn need to be examined.
-
-Some aspects of Footprinting together with Scraping would be used to perform reverse engineering which is more focused on understanding all the detailed underlying logic. Footprinting can also include brute force, dictionary and guessing of file and directory names. Fuzzing may also be used to identify further application resources and capabilities.
-
-Footprinting is much more comprehensive than Fingerprinting which only looks for key indicators. Footprinting attempts to enumerate the whole application scope. Foot printing does not include attempts to exploit weaknesses.
-
-#### Other Names and Examples
-
-Application analysis; API discovery; Application enumeration; Automated scanning; CGI scanning; Crawler; Crawling; Excavation; Forced browsing; Forceful browsing; Fuzzing; Micro service discovery; Scanning; Spidering; WSDL scanning
-
-#### See Also
-
-* OAT-004 Fingerprinting
-* OAT-011 Scraping
-
-
-### OAT-019 Account CreationCreate multiple accounts for subsequent misuse.
-
-#### Description
-
-Bulk account creation, and sometimes profile population, by using the application's account signup processes. The accounts are used subsequently for misuse such as generating content spam, laundering cash and goods, spreading malware, affecting reputation, causing mischief, and skewing search engine optimisation (SEO), reviews and surveys.
-
-Account Creation generates new accounts, rather than attempting to use existing accounts - see Credential Cracking and/or Credential Stuffing.
-
-#### Other Names and Examples
-
-Account pharming; Fake account; Fake social media account creation; Impersonator bot; Massive account registration; New account creation; Registering many user accounts
-
-#### See Also
-
-* OAT-007 Credential Cracking
-* OAT-008 Credential Stuffing
-
-
-## Appendix B - Mappings
-
-TODO
-
-
-
-
-## Appendix C - Use Case Scenarios
+## Appendix A - Use Case Scenarios
 
 ### Defining application security requirements
 
@@ -661,7 +302,7 @@ TODO
 
 #### In practice
 
-The specification for the outsourced development of a new ecommerce website requires that the website must not include any vulnerabilities identified in PCI DSS v3.1 Requirements 6.5. In addition the merchants now adds that the website's payment functions must not be susceptiple to OWASP Automated Threats OAT-001 (Carding), OAT-010 (Card Cracking), or OAT-012 (Cashing Out).
+The specification for the outsourced development of a new ecommerce website requires that the website must not include any vulnerabilities identified in PCI DSS v3.1 Requirements 6.5. In addition the merchants now adds that the website's payment functions must not be susceptiple to OWASP Automated Threats **OAT-001 Carding**, **OAT-010 Card Cracking**, or **OAT-012 Cashing Out**. Some of this will be acheived by the application in combination with a separate fraud detection system.
 
 ### Sharing intelligence within a sector
 
@@ -706,11 +347,396 @@ TODO
 #### In practice
 
 
+## Appendix B - Ontology List and Mappings
 
-## Appendix D - Automated Attack Defense Cheat Sheet
+
+TODO
+
+
+
+
+
+## Appendix C - Automated Attack Defense Cheat Sheet
 
 TODO: (being drafted as separate document)
 
 
+## Ontology Reference ##
 
+This section contains the full details of each threat event in the ontology.
+
+### Key
+
+Categorisations:
+
+* Sectors Targeted - Sectors that are targted more commonly than others for the specific threat event, are highlighted in amber. This is currently just the author's opionion, but the project is seeking information to define this aspect more accurately.
+* Parties Affected - Whether individuals, groups of people, the application owner and other parties are most often affected adversely by the threat event. The threat event may affect other parties depending upon the application and its data. The parties affected, exclude subsequent further misuse.
+* Data Commonly Misused - The types of data are web application specific. However some threat events are more likely to occur for certain data types.
+
+Cross-references:
+
+* CAPEC - Best full and/or partial match CAPEC category IDs and/or attack pattern IDs.
+
+The best match is often the category CAPEC-210 Abuse of Functionality. Only Credential Cracking, Denial of Service and Scraping map to multiple more detailed CAPEC attack pattern IDs, and in these case the most general ones are listed only. The best example of good coverage by both this ontologfy and CAPEC is Credential Cracking, where the latter has three attack patterns defined that completely cover the automated threat event. Based on this comparison it was found that CAPEC categories are often too broad, or the attack patterns are missing or much more detailed than this ontology.
+
+* WASC - 
+
+
+* OWASP - 
+
+
+
+### OAT-001 CardingMultiple payment authorisation attempts used to verify the validity of bulk stolen payment card data.
+
+#### Description
+
+Lists of full credit and/or debit card data are tested against a merchant's payment processes to identify valid card details. The quality of stolen data is often unknown, and Carding is used to identify good data of higher value. Payment cardholder data may have been stolen from another application, stolen from a different payment channel, or acquired from a criminal marketplace.
+
+When partial cardholder data is available, and the expiry date and/or security code are not known, the process is **OAT-010 Card Cracking** instead. The use of stolen cards to obtain cash or goods is **OAT-012 Cashing Out**.
+
+#### Other Names and Examples
+
+Card stuffing; Credit card stuffing; Card verification
+
+#### See Also
+
+* **OAT-010 Card Cracking**
+* **OAT-012 Cashing Out**
+
+
+### OAT-002 Token Code CrackingMass enumeration of coupon numbers, voucher codes, discount tokens, etc.
+
+#### Description
+
+Identification of valid token codes providing some form of user benefit within the application. The benefit may be a cash alternative, a non-cash credit, a discount, or an opportunity such as access to a limited offer.
+
+For cracking of usernames, see **OAT-007 Credential Cracking** instead.
+
+#### Other Names and Examples
+
+Coupon guessing; Voucher, gift card and discount enumeration
+
+#### See Also
+
+* **OAT-007 Credential Cracking**
+* **OAT-011 Scraping**
+* **OAT-012 Cashing Out**
+
+### OAT-003 Ad FraudFalse clicks and fraudulent display of web-placed advertisements.
+
+#### Description
+
+Falsification of the number of times an item such as an advert is clicked on, or the number of times an advertisement is displayed. Performed by owners of web sites displaying ads, competitors and vandals.
+
+See **OAT-016 Skewing** instead for similar activity that does not involve web-placed advertisements.
+
+#### Other Names and Examples
+
+Advert fraud; Adware traffic; Click bot; Click fraud; Hit fraud; Impression fraud; Pay per click advertising abuse; Phoney ad traffic
+
+#### See Also
+
+* **OAT-016 Skewing**
+
+
+### OAT-004 FingerprintingElicit information from the web, application and database servers about the supporting software and framework types and versions.
+
+#### Description
+
+Specific requests are sent to the application eliciting information in order to profile the application. This probing typically examine HTTP header names and values, session identifier names and formats, contents of error page messages, URL path case sensitivity, URL path patterns, file extensions, and whether software-specific files and directories exist. Fingerprinting is often reliant on information leakage and this profiling may also reveal some network architecture/topology. The fingerprinting may be undertaken without any direct usage of the application e.g. by quering a store of exposed application properties such as held in a search engine's index.
+
+Fingerprinting seeks to identity application components, whereas **OAT-018 Footprinting** is a more detailed analysis of how the application works.
+
+For data extraction, see **OAT-011 Scraping** instead.
+
+#### Other Names and Examples
+
+Google dorking; Google hacking; Shodaning; Target acquisition; Target scanning; Finding potentially vulnerable applications; Reconnaissance; URL harvesting; Web application fingerprinting
+
+#### See Also
+
+* **OAT-011 Scraping**
+* **OAT-018 Footprinting**
+
+
+### OAT-005 ScalpingObtain limited-availability and/or preferred goods/services by unfair methods.
+
+#### Description
+
+Mass acquisition of goods or services using the application in a manner that a normal user would be unable to undertake manually.
+
+Although Scalping may include monitoring awaiting availability of the goods or services, and then rapid action to beat normal users to obtain these, Scalping is not a "last minute" action like **OAT-013 Sniping**, nor just related to automation on behalf of the user such as in **OAT-006 Expediting**. This is because Scalping includes the additional concept of limited availability of sought-after goods or services, and is most well known in the ticketing business where the tickets acquired are then resold later at a profit by the scalpers/touts. This can also lead to a type of user denial of service since the goods or services become unavailable rapidly.
+
+#### Other Names and Examples
+
+Bulk purchase; Purchase automaton; Purchase bot; Restaurant table/hotel room reservation speed-booking; Queue jumping; Sale stampede; Ticket resale; Ticket scalping; Ticket touting
+
+#### See Also
+
+* **OAT-006 Expediting**
+* **OAT-013 Sniping**
+* **OAT-015 Denial of Service**
+
+
+### OAT-006 ExpeditingPerform actions to hasten progress of usually slow, tedious or time-consuming actions on behalf of a person.
+
+#### Description
+
+Using speed to violate explicit or implicit assumptions about the application's normal use to achieve unfair individual gain, often associated with deceit and loss to some other party.
+
+In contrast to **OAT-016 Skewing** which affects metrics, Expediting is purely related to faster progression through a series of application processes. And **OAT-017 Spamming** is different to Expediting, since the focus of spam is to add information, and may not involve the concept of process progression.
+
+#### Other Names and Examples
+
+Algorithmic trading; Automated stock trading; Betting automation; Game playing automation; Gaming bot; Gold farming; *Financial instrument dealing;* High frequency trading; Purchasing automation; Travel ticketing automation; Trading automation; Virtual wealth generation bot
+
+#### See Also
+
+* **OAT-005 Scalping**
+* **OAT-013 Sniping**
+* **OAT-016 Skewing**
+* **OAT-017 Spamming**
+
+
+### OAT-007 Credential CrackingIdentify valid log in credentials by trying different values for usernames and/or passwords.
+
+#### Description
+
+Brute force, dictionary (word list) and guessing attacks used against authentication processes of the application to identify valid account credentials. This may utilise common usernames or passwords, or involve initial username evaluation. 
+
+The use of stolen credential sets (paired username and passwords) is **OAT-008 Credential Stuffing**.
+
+#### Other Names and Examples
+
+Brute force, dictionary and guessing attacks; Brute-force attacks against sign-in; Brute forcing log-in credentials; Brute-force password cracking; Cracking login credentials; Password brute-forcing; Password cracking; Reverse brute force attack; Username cracking; Username enumeration
+
+#### See Also
+
+* **OAT-002 Token Code Cracking**
+* **OAT-008 Credential Stuffing**
+* **OAT-019 Account Creation**
+
+
+### OAT-008 Credential StuffingMass log in attempts used to verify the validity of stolen username/password pairs.
+
+#### Description
+
+Lists of authentication credentials stolen from elsewhere are tested against the application's authentication mechanisms to identify whether users have re-used the same log in credentials. The stolen usernames (often email addresses) and password pairs could have been sourced directly from another application by the attacker, purchased in a criminal marketplace, or obtained from publicly available breach data dumps.
+
+Unlike **OAT-007 Credential Cracking**, Credential Stuffing does not involve any brute-forcing or guessing of values; instead credentials sets used in other applications are being tested for validity.
+
+#### Other Names and Examples
+
+Account checker attack; Account checking; Account takeover; Account takeover attack; Login Stuffing; Password list attack; Password re-use; Stolen credentials; Use of stolen credentials
+
+#### See Also
+
+* **OAT-007 Credential Cracking**
+* **OAT-019 Account Creation**
+
+
+### OAT-009 CAPTCHA BypassSolve anti-automation tests.
+
+#### Description
+
+Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) challenges are used to distinguish normal users from bots. Automation is used in an attempt to analysis and determination the answer to visual and/or aural CAPTCHA tests and related puzzles. Apart from conventional visual and aural CAPTCHA, puzzle solving mini games or arithmetical exercises are sometimes used. Some of these may include context-specific challenges.
+
+The process that determines the answer may utilise tools to perform optical character recognition, or matching against a prepared database of pre-generated images, or using other machine reading, or human farms.
+
+#### Other Names and Examples
+
+Breaking CAPTCHA; CAPTCHA breaker; CAPTCHA breaking; CAPTCHA decoding; CAPTCHA solver; CAPTCHA solving; Puzzle solving
+
+#### See Also
+
+* **OAT-006 Expediting**
+* **OAT-011 Scraping**
+
+
+### OAT-010 Card CrackingIdentify missing expiry dates and security codes for stolen payment card data by trying different values.
+
+#### Description
+
+Brute force attack agsinst application payment card process to identify the missing values for start date, expiry date and card security code (CSC), referred to in many ways including card validation number 2 (CVN2), card validation code (CVC), card verification value (CV2) card identification number (CID).
+
+When these values are known as well as the Primary Account Number (PAN), **OAT-001 Carding** is used to validate the details, and **OAT-012 Cashing Out** to obtain goods or cash.
+
+#### Other Names and Examples
+
+Brute forcing credit card information; Card brute forcing; Credit card cracking
+
+#### See Also
+
+* **OAT-001 Carding**
+* **OAT-012 Cashing Out**
+
+
+### OAT-011 ScrapingCollect application content and/or other data for use elsewhere.
+
+#### Description
+
+Collecting accessible data and/or processed output from the application. Some scraping may use fake or compromised accounts, or the information may be accessible without authentication. The scraper may attempt to read all accessible paths and parameter values for web site pages and web APIs, collecting the responses and extracting data from them. In some forms of Scraping like account aggregation, part of the Scraping may occur in real time, and part may be more periodic in nature.
+
+Commonly collected data is page content and data such as account credentials, biometric data, business information, copies of physical documents, email addresses, facial photographs, identities, intellectual property, payment cardholder data, security secrets, trade secrets, usernames, and other personal data. Some of these may be considered of standalone value such as reputation, virtual assets (e.g. status, score, virtual currency, identity), awards and points.
+
+Some Scraping may be to exercise an application, or part of an application, with the intent to gain insight how it is constructed and operates - perhaps for cryptanalysis, reverse engineering, or session analysis.
+
+Where the intent is to obtain cash or goods, see **OAT-012 Cashing Out** instead. Where the application is being enumerated see **OAT-018 Footprinting** instead.
+
+#### Other Names and Examples
+
+Account aggregation; Aggregator; API provisioning; Asset stripping; Bargain hunting; Change monitoring; Comparative shopping; Data aggregation;  Data mining; Database scaping; Duplicate site; Extraction; Harvesting; Indexing; Media scraping; Memory scraping; Meta search scraper; Mirroring; Pagejacking; Price harvesting; Powering APIs; Product page scraper; Report mining; Ripping; Sanctioned scraping; Scraper bot; Screen scraping; Search engine bot; Social media bot
+
+#### See Also
+
+* **OAT-012 Cashing Out**
+* **OAT-018 Footprinting**
+
+
+### OAT-012 Cashing OutBuy goods or obtain cash utilising validated stolen payment card *or other user account* data.
+
+#### Description
+
+Obtaining currency or higher-value merchandise via the application using stolen previously validated payment cards or *other account log in credentials*. Cashing Out is sometimes may be undertaken in conjunction with product return fraud. * For financial transactions, this is usually a transfer of funds to a mule's account.* For payment cards, this activity may occur following **OAT-001 Carding** of bulk stolen data, or **OAT-010 Card Cracking**, and the goods are dropped at a reshipper's address. *The refunding of payments via non-financial applications (e.g. tax refunds, claims payment) is also included in Cashing Out.* 
+
+Obtaining other information of value from the application is **OAT-011 Scraping** instead.
+
+#### Other Names and Examples
+
+Cashing out; *Man-in-the-Browser (MitB);???* Money laundering; Online credit card fraud; Online payment card fraud; *Refund fraud; Stolen identity refund fraud (SIRF)*
+
+#### See Also
+
+* **OAT-001 Carding**
+* **OAT-011 Scraping**
+* **OAT-010 Card Cracking**
+
+
+### OAT-013 SnipingLast minute bid or offer, for goods or services.
+
+#### Description
+
+The defining characteristic of Sniping is an action undertaken at the latest opportunity to achieve a particular objective, leaving insufficient time for another user to bid/offer. Sniping can also be the automated exploitation of system latencies in the form of timing attacks. Careful timing and prompt action are necessary parts. It is most well known as auction sniping, but the same threat event can be used in other types of application. Sniping normally leads to some disbenefit for other users, and sometimes that might be a form of denial of service.
+
+In contrast **OAT-005 Scalping** is the acquisition of limited availability of sought-after goods or services.
+
+#### Other Names and Examples
+
+Auction sniping; Bid sniper; *Front-running; Last look;* Last minute bet; Timing attack
+
+#### See Also
+
+* **OAT-005 Scalping**
+* **OAT-006 Expediting**
+* **OAT-015 Denial of Service**
+
+
+### OAT-014 Vulnerability ScanningCrawl and fuzz application to identify weaknesses and possible vulnerabilities.
+
+#### Description
+
+Systematic enumeration and examination of identifiable, guessable and unknown content locations, paths, file names, parameters, in order to find weaknesses and points where a security vulnerability might exist. Vulnerability Scanning includes both malicious scanning and friendly scanning by an authorised vulnerability scanning engine. It differs from **OAT-011 Scraping** in that its aim is to identify potential vulnerabilities.
+
+The exploitation of individual vulnerabilities is not included in the scope of this ontology, but this process of scanning. Vulnerability Scanning, along with **OAT-018 Footprinting**, **OAT-004 Fingerprinting** and **OAT-011 Scraping** often form part of application penetration testing.
+
+Vulnerability Scanning has sometimes been mistakenly called penetration testing, or application security assessment, or vulnerability exploitation.
+
+#### Other Names and Examples
+
+Active/Passive vulnerability scanning; Application-specific vulnerability discovery by site-crawling botnet; Automated vulnerability scanning; Identifying vulnerable content management systems (CMS) and CMS components; Known vulnerability scanning; Malicious crawling; Scanning; Vulnerability reconnaissance, Vulnerability scanner; Vulnerability scanning
+
+#### See Also
+
+* **OAT-004 Fingerprinting**
+* **OAT-011 Scraping**
+* **OAT-018 Footprinting**
+
+
+### OAT-015 Denial of ServiceTarget resources of the application and database servers, or individual user accounts, to achieve denial of service (DoS).
+
+#### Description
+
+These attacks often resemble legitimate application usage, but lead to exhaustion of resources such as file system, memory, processes, threads, CPU, human or financial resources. The resources might be related to web, application or databases servers or other services supporting the application such as third party APIs, included third-party hosted content, or content delivery networks (CDNs).
+
+The application may be affected as a whole, or the attack may be against individual users such as account lockout. This user-specific application DoS may also be the result of application message, email or SMS spam floods.
+
+This ontology's scope excludes other forms of denial of service that affect web applications, namely HTTP Flood DoS (GET, POST, Header with/without TLS), HTTP Slow DoS, IP layer 3 DoS, and TCP layer 4 DoS. Those protocol and lower layer aspects are covered adequately in other taxonomies and lists.
+
+#### Other Names and Examples
+
+Abuse of shopping carts; Account lockout; App layer DDoS; Asymmetric application-level DoS attacks; Asymmetric resource consumption (amplification); Bad configuration DoS; Business logic DDoS; Cash overflow; Cloud service provider credit DoS; Cost escalation; Disable/delete user accounts; Excessive allocation; Excessive anti-fraud measures; Forced deadlock; Hash DoS; Inefficient code; Indexer DoS; Large files DoS; Poorly designed web application DoS; Resource depletion; Resource locking; Regular expression exponential blowup; Resource exhaustion; Resource leak exposure; Self-inflicted DoS; SOAP array blowup; Spam receipt DoS; Sustained client engagement; The Great Firewall of China DoS; User DoS; XML attribute blowup; XML DoS; XML entity blowup; XML entity expansion; XML quadratic expansion
+
+#### See Also
+
+* **OAT-005 Scalping**
+* **OAT-013 Sniping**
+* **OAT-019 Account Creation**
+
+
+### OAT-016 SkewingRepeated link clicks, page requests or form submissions intended to alter some metric.
+
+#### Description
+Automated repeated clicking or requesting or submitting content, affecting application-based metrics such as counts, and measures of frequency and/or rate. The metric or measurement may be visible to users (e.g. betting odds, likes, market pricing, visitor count, poll results, reviews) or hidden (e.g. application usage statistics, business performance indicators). Metrics may affect individuals as well as application-owner e.g. user reputation, influence others, gain fame, or undermine someone else’s reputation.
+For malicious alteration of digital advertisement metrics, see **OAT-003 Ad Fraud** instead
+
+#### Other Names and Examples
+Biasing KPIs; Boosting friends, visitors, and likes; Click fraud; Complaint boosting; Election fraud; Hit count fraud; Market distortion; Metric and statistic skewing; Page impression fraud; Poll fraud; Poll skewing; Poll/voting subversion; Rating/review skewing; Search engine ranking skewing; Skewing consultations, elections, polls, rankings and votes; Stock manipulation; Survey skewing
+
+#### See Also
+* **OAT-003 Ad Fraud*** **OAT-017 Spamming*** **OAT-019 Account Creation**
+
+
+### OAT-017 SpammingMalicious and/or more benign information addition, that appears in public or private content, databases or user messages.
+
+#### Description
+
+Malicious content can include malware, Iframe distribution, photographs & videos, advertisements, referrer spam and tracking/surveillance code. The content might be less overtly malicious but be an attempt to cause mischief, undertake search engine optimisation (SEO) or to dilute/hide other posts.
+The mass abuse of broken form-to-email and form-to-SMS functions to send messages to unintended recipients is not included in this threat event, or any other in this ontology, since those are considered to be the exploitation of implementation flaws alone.
+For multiple use that distorts metrics, see **OAT-016 Skewing** instead.
+
+#### Other Names and Examples
+
+Blog spam; Bulletin board spam; Comment spam; Complaint spam; Content spam; Content spoofing; Email field spam; Enquiry spam; Form spam; Forum spam; Guest book spam; Profile spam; Referrer spam; Response form spam; Review spam; SEO referral spam; Spam crawlers; Spammer bot; Spam 2.0; Web spambot; Wiki spam; Third-party component compromise; Twitter spam
+
+#### See Also
+
+* **OAT-015 Denial of Service*** **OAT-016 Skewing*** **OAT-019 Account Creation**
+
+
+### OAT-018 FootprintingProbe and explore application to identify its constituents and properties.
+
+#### Description
+
+Information gathering with the objective of learning as much as possible about the composition, configuration and security mechanisms of the application. Unlike Scraping, Footprinting is an enumeration of the application itself, rather than the data. It is used to identify all the URL paths, parameters and values and process sequences (i.e. to determine entry points, also called the attack surface). As the application is explored, additional paths will be identified which in turn need to be examined.
+
+Some aspects of **OAT-004 Fingerprinting** together with **OAT-011 Scraping** would be used to perform reverse engineering which is more focused on understanding all the detailed underlying logic. Footprinting can also include brute force, dictionary and guessing of file and directory names. Fuzzing may also be used to identify further application resources and capabilities.
+
+Footprinting is much more comprehensive than **OAT-004 Fingerprinting** which only looks for key indicators. Footprinting attempts to enumerate the whole application scope. Foot printing does not include attempts to exploit weaknesses.
+
+#### Other Names and Examples
+
+Application analysis; API discovery; Application enumeration; Automated scanning; CGI scanning; Crawler; Crawling; Excavation; Forced browsing; Forceful browsing; Fuzzing; Micro service discovery; Scanning; Spidering; WSDL scanning
+
+#### See Also
+
+* **OAT-004 Fingerprinting**
+* **OAT-011 Scraping**
+
+
+### OAT-019 Account CreationCreate multiple accounts for subsequent misuse.
+
+#### Description
+
+Bulk account creation, and sometimes profile population, by using the application's account signup processes. The accounts are used subsequently for misuse such as generating content spam, laundering cash and goods, spreading malware, affecting reputation, causing mischief, and skewing search engine optimisation (SEO), reviews and surveys.
+
+Account Creation generates new accounts, rather than attempting to use existing accounts - see **OAT-007 Credential Cracking** and **OAT-008 Credential Stuffing**.
+
+#### Other Names and Examples
+
+Account pharming; Fake account; Fake social media account creation; Impersonator bot; Massive account registration; New account creation; Registering many user accounts
+
+#### See Also
+
+* **OAT-007 Credential Cracking**
+* **OAT-008 Credential Stuffing**
 	
