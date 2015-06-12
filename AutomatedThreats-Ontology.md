@@ -1,18 +1,19 @@
 # Automated Threats to Web Applications - Handbook
 
-DRAFT, May 2015
+DRAFT, 12th June 2015
 
 ## Covers
 
 ### Front
 
 The Automated Threat Handbook
+Web Applications
 
-(this is essentially the ontology with its background, but will grow to include other materials like the cheat sheet, mitigations, etc).
+Version 1.0
 
 ### Back
 
-This document is an output of the OWASP Automated Threats to Web Applications Project creates information and other resources for architects, developers, testers, and others to help defend against automated threats.
+This document is an output of the OWASP Automated Threats to Web Applications Project . The project creates information and other resources for architects, developers, testers, and others to help defend against automated threats.
 
 [https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
@@ -251,7 +252,7 @@ The author hopes this ontology with its industry cross-referencing may be of hel
 Sector-specific guides:
 
 * Highest risk threat events
-* 
+* Attacker motivations
 
 Pages 2s:
 
@@ -259,7 +260,9 @@ Pages 2s:
 * Symptoms
 * For builders
 * For defenders
+* Metrics
 
+Automated Threat Cheat Sheet
 
 ## Glossary
 
@@ -291,77 +294,61 @@ The first three specifications for Web technologies defined URLs, HTTP, and HTML
 ### Web application
 An application delivered over the web
 
+## Project outputs
+
+The wiki page for OWASP Automated Threats to Web Applications Project is:
+
+[https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+
+The project's mailing list is:
+
+[https://lists.owasp.org/mailman/listinfo/automated_threats_to_web_applications](https://lists.owasp.org/mailman/listinfo/automated_threats_to_web_applications)
+
+The original versions of this handbook are maintained at these locations:
+
+* PDF
+  * Print ready high resolution [TBD]()
+  * Low resolution [TBD]()
+* Adobe InDesign [TBD]()
+
+Other working materials and outputs are:
+
+* Overview, 2 page PDF []()
+* Survey sheet used at Appsec EU 2015, PDF [https://www.owasp.org/index.php/File:Automation-questionnaire-1v0.pdf](https://www.owasp.org/index.php/File:Automation-questionnaire-1v0.pdf)
+* Summary threats and attacks extracted during the research phase, large scale PDF [https://www.owasp.org/index.php/File:Automated-threats.pdf](https://www.owasp.org/index.php/File:Automated-threats.pdf)
+
+
 
 
 ## Appendix A - Use Case Scenarios
 
-### Defining application security requirements
+### Defining application development security requirements
 
-#### Intent
-
-
-#### In practice
-
-The specification for the outsourced development of a new ecommerce website requires that the website must not include any vulnerabilities identified in PCI DSS v3.1 Requirements 6.5. In addition the merchants now adds that the website's payment functions must not be susceptiple to OWASP Automated Threats **OAT-001 Carding**, **OAT-010 Card Cracking**, or **OAT-012 Cashing Out**. Some of this will be acheived by the application in combination with a separate fraud detection system.
-
+Cinnaminta SpA intends to build and launch a new multi-lingual and multi-currency ecommerce website. The development will be outsourced and Cinnaminta has been working on the functional design document. Amongst many other requirements, the application security specification requires that the website must not include any vulnerabilities identified in PCI DSS v3.1 Requirement 6.5, nor any other vulnerabilities that could affect the protection of payment cardholder data. Cinnaminta specifies that the website's payment functions must not be susceptiple to the threat events **OAT-001 Carding** or **OAT-010 Card Cracking** defined in the **OWASP Automated Threat Handbook**. In addition the application must interact with the company's existing fraud detection system to counter **OAT-012 Cashing Out**. Development houses responding to the Invitation To Tender (ITT) use the ontology to focus their bid responses to these aspects appropriately.
 ### Sharing intelligence within a sector
 
-#### Intent
-
-Unlimited Innovations Inc provides ecommerce solutions to a range of international retailers and participates in the Retail Cyber Intelligence Sharing Center (R-CISC). Unlimited already builds into its software continuous monitoring capabilities and decides to provide an optional enhancement so that participating retailers could choose to share their misuse event data between each other, to benefit from the combined threat intelligence. Rather than sharing large quantities of  low-level data, Unlimited aggregate information and broadcast validated and categorised threat data amongst the participating companies. Automation attacks are classified according to the [ONTOLOGY] so that each receiving party understands the nature of the threat. Even for retailers that do not want to take part of this information sharing can benefit, since the classified information is made available to internal business management in the form of an easy-to-comprehend monitoring dashboard. The information gathered is also used by the retailers to feed into their business information management systems.
-
-#### In practice
-
+Unlimited Innovations Inc provides ecommerce solutions to a range of international retailers and participates in the Retail Cyber Intelligence Sharing Center (R-CISC). Unlimited already builds into its software continuous monitoring capabilities and decides to provide an optional enhancement so that participating retailers could choose to share their misuse event data between each other, to benefit from the combined threat intelligence. Rather than sharing large quantities of low-level data, Unlimited Innovations aggregate information and broadcast validated and categorised threat data amongst the participating companies. Automation attacks are classified according to the threat events defined in the **OWASP Automated Threat Handbook** so that each receiving party understands the nature of the threat. Even for retailers that do not want to take part of this information sharing can benefit, since the classified information is made available to internal business management in the form of an easy-to-comprehend monitoring dashboard. The information gathered is also used by the retailers to feed into their business information management systems.
 ### Exchanging threat data between CERTs
 
-TODO
+National Computer Emergency Response Teams (CERTs) recognise that sharing of information from local detection can contribute to worldwide prevention of cyber attacks. Despite advances in cooperation between CERTs, anything to increase continuity and interoperatbility such as standards for data exchange is encourage. CERT Zog is concerned about the sparsity of application-specific data it receives, and also the classification of that data. It has a particular concern about attacks and breaches that affect sectors defined in Zog's 2015 national cyber security strategy. CERT Zog and its adjoining neighbour CERT Tarset agree to use threat events defined in the **OWASP Automated Threat Handbook** to add greater context to existing solutions being used for threat data exchange between the CERTs. The programme also collects sector meta data, so that all organisations within these can benefit from the centralised intelligence.
+### Enhancing application penetration test findings
 
-#### Intent
+Specialist application security penetration testing firm Cherak Industries Pte Ltd works primarily for financial services companies in the banking and insurance sectors, and is looking to expand its business throughout Asia. Cherak has some innovative pen test result reporting systems which integrate with client software fault and vulnerability tracking systems, and it actively looks for methods to provide additional value to its clients. Cherak has identified that pen test clients would benefit from help to understand the effects of combinations of vulnerabilities, especially design flaws, and has decided to utilise the **OWASP Automated Threat Handbook** to define and explain the automation-related threats. The individual vulnerabilities were scored as normal using CVSSv2 and v3, the matching CWEs identified, and mitigations in place documented. In addition Cherak use the threat events **OAT-001 Carding** or **OAT-010 Card Cracking** defined in the **OWASP Automated Threat Handbook** to help create a new section in the executive summary that explains how combinations of the issues found could lead to automation threats and the possible technical and business impacts. For example, an assessment for one client had identified weaknesses in authentication so that there is a risk of **OAT-008 Credential Stuffing**. The defined This identifier was provided to the client so its technical staff could refer to additional information on the OWASP website.
+### Specifying service acquisition needs
 
-#### In practice
-
-### Labelling penetration test findings
-
-#### Intent
-
-Specialist application security penetration testing firm Cherak Industries Pte Ltd works primarily for financial services companies in the banking and insurance sector and is looking to expand its business throughout Asia. Cherak has some innovative pen test result reporting systems which integrate with client software fault and vulnerability tracking systems, and it is always on the look out for methods to provide additional value to its clients. Cherak has identified that pen test clients would benefit from help with understanding the effects of combinations of vulnerabilities and has decided to utilise the [ONTOLOGY] to define and explain the automation-related threats. The individual vulnerabilities were scored as normal using CVSSv2 and v3, the matching CWEs identified, and mitigations in place documented. In addition Cherak used the [ONTOLOGY] to help create a new section in the executive summary to explain how combinations of the issues found could lead to automation threats and the possible technical and business impacts. For example, an assessment for one client had identified weaknesses in authentication so that [CREDENTIAL STUFFING] is an automation threat. The defined [ONTOLOGY] entry name and ID were provided so that the client's technical staff could refer to additional information on the OWASP website.
-
-#### In practice
-
-
-### Documenting service acquisition needs
-
-#### Intent
-
-Falstone Paradise Inc is concerned about malicious use of their portfolio of hotel and resort websites. The majority of the websites use a shared application platform, but there are some unique applications and a large number of other micro-sites, some of which use generic content management systems such as Wordpress and Drupal. Falstone Paradise has identified that its IT operations team are spending too much time dealing with the effects of automated misuse, such as cleaning up data, resetting customer accounts and providing extra capacity during attacks. Furthermore, the unwanted automation is also causing some instabilities leading to negative feedback from customers. Therefore Falstone Paradise has decided to go out to the security marketplace to identify, assesses and select products or services that might help address these automation issues for all its websites. Its buying team worked with their colleagues in information technology to write the detailed requirements in an Invitation to Tender (ITT) document. This described the types of attacks its web applications are receiving, the frequency of occurrence and magnitudes. These are defined according to the [ONTOLOGY] so that vendors do not misunderstand the requirements, and so that each vendor's offering could be assessed against each individual type of automation threat. 
-
-#### In practice
-
-
+Falstone Paradise Inc is concerned about malicious use of their portfolio of hotel and resort websites. The majority of the websites use a shared application platform, but there are some unique applications and a large number of other micro-sites, some of which use generic content management systems such as Wordpress and Drupal. Falstone Paradise has identified that its IT operations team are spending too much time dealing with the effects of automated misuse, such as cleaning up data, resetting customer accounts and providing extra capacity during attacks. Furthermore, the unwanted automation is also causing some instabilities leading to negative feedback from customers. Therefore Falstone Paradise has decided to go out to the security marketplace to identify, assesses and select products or services that might help address these automation issues for all its websites. The buying team worked with their colleagues in information technology to write the detailed requirements in an Invitation to Tender (ITT) document. This described the types of attacks its web applications are receiving, the frequency of occurrence and magnitudes. These are defined according to the **OWASP Automated Threat Handbook** so that vendors do not misunderstand the requirements, and so that each vendor's offering could be assessed against the particular automation threat events of concern.
 ### Characterising vendor services
 
-TODO
-
-#### Intent
-
-#### In practice
+Better Best Ltd has developed an innovative tecehnology to help gaming companies defend against a range of automated threats that can otherwise permit cheating and distortion of the game, leading to disruption to normal players. The solution can be deployed on premises, but is also available in the cloud as a service. But Better Best is finding difficulty explaining its solution in the market place, especillay since it does not fit into any conventional product category. Better Best decide to use the terminology and threat events lisyed in the **OWASP Automated Threat Handbook** to define their product's capabilities. They hope this will provide some clarity to their offering, and also demonstrate how their product can be used to replace more than one other conventional security device. Better Best document how thor product is used to protect against **OAT-006 Expediting**, **OAT-005 Scalping**, **OAT-016 Skewing** and **OAT-013 Sniping**. The requirements are specified in terms of the threat events, rather than in terms of particular products and service categories.
 
 
 ## Appendix B - Ontology List and Mappings
 
-
 TODO
 
 
 
-
-
-## Appendix C - Automated Attack Defense Cheat Sheet
-
-TODO: (being drafted as separate document)
-
-
-## Ontology Reference ##
+## Ontology Reference
 
 This section contains the full details of each threat event in the ontology.
 
