@@ -16,15 +16,48 @@ Version 1.0
 
 ### Back
 
-This document is an output of the OWASP Automated Threats to Web Applications Project. The project creates information and other resources for architects, developers, testers, and others to help defend against automated threats.
+This document is an output of the OWASP Automated Threats to Web Applications Project. The project creates information and other resources for architects, developers, testers, and others to help defend against automated threats.
 
 [https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
 All OWASP materials are free to use. This document is licensed under the Creative Commons Attribution-ShareAlike 3.0 license, so you can copy, distribute and transmit the work, and you can adapt it, and use it commercially, but all provided that you attribute the work and if you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
 
-© OWASP Foundation
+© 2015 OWASP Foundation
 
 (ISBN Code)
+
+## Title page
+
+The Automated Threat Handbook
+
+Web Applications
+
+The Automated Threat Handbook provides actionable information and resources to help web application owners defend against automated threats to web applications
+
+Author: Colin Watson
+
+Other Project Contributors and Reviewers: 
+
+Version 1.0 published ?? ???? 2015
+
+© 2015 OWASP Foundation
+
+This document is licensed under the Creative Commons Attribution-ShareAlike 3.0 license
+
+
+## Contents
+
+* Preface
+* Introduction
+* Research
+* The Ontology
+* Use and Forward Plan
+* Glossary
+* Project Details and Outputs
+* Appendices
+  * A: Use Case Scenarios
+  * B: Ontology Views and Mappings
+* Ontology Reference
 
 ## Preface
 
@@ -70,7 +103,7 @@ The initial objectives defined in early 2015 were:
 * Provide a definition of "automated threat" 
 * Create a common vocabulary, and relationships, of automated threats which maintains consistency with existing literature.
 
-This would involve creating a listing of vendor-neutral and technology agnostic terms that describe real-world automated threats to web applications, at a level of abstraction suitable for application owners. The ontology and other supporting materials need to be paractical and useful for a range of activities throughout a secure software development lifecycle (S-SDLC).
+This would involve creating a listing of vendor-neutral and technology agnostic terms that describe real-world automated threats to web applications, at a level of abstraction suitable for application owners. The ontology and other supporting materials need to be practical and useful for a range of activities throughout a secure software development lifecycle (S-SDLC).
 
 ### Scope
 
@@ -159,7 +192,7 @@ The ontology is a list of threat event scenarios (when a threat agent acts again
 
 ### The list
 
-Full details of the finalised ontology threat events are provided in the yellow tinted pages at the end of this handbook. A summary, ordered by identity ascending, is provided below:
+Full details of the finalised ontology threat events are provided in the cream coloured pages at the end of this handbook. A summary, ordered by identity ascending, is provided below:
 
 Identity | Name | Defining characteristics
 --------|-------|------
@@ -285,15 +318,15 @@ Retail, and financial service sectors appear to be good candidates to begin with
 
 Currently each threat event is defined on a single page (see the listing at the end of this handbook). It is intended to augment the current information with the following details on the reverse sides of the threat event pages:
 
-* Mitigations
 * Symptoms
+* Mitigations
 * For builders
 * For defenders
-* Metrics.
+* Threat identification metrics.
 
 It would also be useful to summarise the developer-relevant information into a new Automated Threat Cheat Sheet, and contribute that to the OWASP Cheat Sheet Series.
 
-The author also hopes this ontology with its industry cross-referencing may be of help in contributing to Mitre's Common Weakness Risk Analysis Framework (CWRAF) and Common Attack Pattern Enumeration and Classification (CAPEC).
+The author also hopes this ontology with its industry cross-referencing may be of help in contributing to Mitre's Common Weakness Risk Analysis Framework (CWRAF) and Common Attack Pattern Enumeration and Classification (CAPEC). Also in the future the terms might be useful for helping to describe some application events in the Mitre/DHS Structured Threat Information eXpression (STIX).
 
 ## Glossary
 
@@ -443,6 +476,8 @@ OAT-012 | Cashing Out | Buy goods or obtain cash utilising validated stolen paym
 
 ### Application information gathering prior to exploitation threat events, ordered by name
 
+Identity | Name | Defining characteristics
+--------|-------|------
 OAT-004 | Fingerprinting | Elicit information from the web, application and database servers about the supporting software and framework types and versions
 OAT-018 | Footprinting | Probe and explore application to identify its constituents and properties
 OAT-014 | Vulnerability Scanning | Crawl and fuzz application to identify weaknesses and possible vulnerabilities
